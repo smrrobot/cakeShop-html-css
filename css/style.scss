@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+// :root {
+//   --base: rgb(255, 255, 255);
+//   --accent: rgb(189, 242, 238);
+//   --pink: rgb(247, 214, 227);
+// }
+$base: rgb(255, 255, 255);
+$accent: rgb(189, 242, 238);
+$pink: rgb(247, 214, 227);
+$off-white: #edf0f1;
+$black: rgb(56, 56, 56);
+$gray: gray;
+* {
+  color: $black;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.link {
+  cursor: pointer;
+}
+li,
+a,
+button,
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: $off-white;
+  text-decoration: none;
+  color: $black;
+}
+
+header {
+  display: flex;
+  // border: 2px solid $pink;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15%;
+  .crumbs {
+    ul {
+      list-style: none;
+      text-align: end;
+      li {
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(255, 0, 0, 0.075);
+      float: left;
+    }
+  }
+  .logo img {
+    width: 100px;
+    height: 100px;
+    // border: 1px solid gray;
+  }
+}
+main {
+  padding: 15px 15%;
+  margin-bottom: 50%; // delete later
+
+  .title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: $black;
+    text-decoration: none;
+    padding: 0;
+    z-index: 1;
+  }
+  .top-container {
+    .main-cake {
+      width: 50%;
+      top: 100px;
+      position: absolute;
+      right: 5%;
+      background-color: rgba(255, 255, 255, 0);
+      z-index: -1;
+    }
+
+    .box {
+      // flex: 1;
+      padding: 10% 0 0 10%;
+      // border: 1px solid red;
+      width: 70%;
+
+      p {
+        line-height: 200%;
+        padding: 3% 35% 20% 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      button {
+        padding: 3% 5% 3% 5%;
+        border: none;
+        border-radius: 5px;
+        background-color: $accent;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .card-container {
+    // border: 1px solid blue;
+    margin-top: 10%;
+
+    .card-title {
+      // border: 1px solid green;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 5%;
+
+      p {
+        line-height: 200%;
+      }
+    }
+    .card-row {
+      flex-wrap: wrap;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      padding: 0 10%;
+
+      .card {
+        align-items: center;
+        // border: 1px solid red;
+        border-radius: 20px;
+        width: 200px;
+        height: 200px;
+        margin: 3%;
+        transition: ease-in-out 0.3s;
+
+        .card-bg {
+          position: absolute;
+          overflow: hidden;
+          opacity: 0.2;
+          width: 140px;
+        }
+        p {
+          color: #edf0f1;
+          position: absolute;
+          font-weight: 700;
+          font-size: 1.8rem;
+          z-index: 10000;
+          text-align: center;
+        }
+      }
+      .card:nth-child(1) {
+        background-color: rgb(148, 211, 212);
+      }
+      .card:nth-child(2) {
+        background-color: rgb(245, 90, 146);
+      }
+      .card:nth-child(3) {
+        background-color: rgb(148, 211, 212);
+      }
+      .card:nth-child(4) {
+        background-color: rgb(196, 139, 70);
+      }
+      .card:nth-child(5) {
+        background-color: rgb(245, 90, 146);
+      }
+      .card:nth-child(6) {
+        background-color: rgb(196, 139, 70);
+      }
+    }
+  }
+}
+.shadow {
+  transition: ease-out 0.3s;
+}
+.shadow:hover {
+  transition: ease-in 0.3s;
+
+  box-shadow: 0px 0px 15px $gray;
+}
+@media screen and (max-width: 700px) {
+  main {
+    .top-container {
+      .main-cake {
+        width: 500px;
+
+        right: -170px;
+      }
+      .box {
+        // flex: 1;
+        padding: 5% 0 0 5%;
+        width: 80%;
+
+        p {
+          line-height: 140%;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .card-container {
+      .card-title p {
+        line-height: 140%;
+        font-weight: 400;
+      }
+      .card {
+        width: 120px !important;
+        height: 120px !important;
+        margin: 3% !important;
+        p {
+          font-size: 1.1rem !important;
+        }
+
+        .card-bg {
+          width: 100px !important;
+        }
+      }
+    }
+  }
+
+  header,
+  main {
+    padding: 15px 5%;
+  }
+}
