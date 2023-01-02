@@ -7,14 +7,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cake Shop</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <svg
       id="visual"
-      style="position: absolute; z-index: -1"
+      style="position: absolute; z-index: -10000"
       viewBox="10 -240 1200 720"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -57,7 +57,9 @@
 
           <a href="#"><button class="link shadow">Find your dessert</button></a>
         </div>
-        <img src="./img/cake.png" alt="Cake" class="main-cake" />
+        <div class="imgBox">
+          <img src="./img/cake.png" alt="Cake" class="main-cake" />
+        </div>
       </div>
       <div class="card-container">
         <div class="card-title">
@@ -94,22 +96,39 @@
           </div>
         </div>
       </div>
-      <svg
+      <!-- <svg
         id="visual"
-        style="position: absolute; z-index: -1; overflow: visible"
-        viewBox="100 0 100 300"
+        style="position: absolute; z-index: -10000; overflow: visible; top: 45%;"
+        viewBox="0 0 100 300"
         width="100"
-        height="600"
+        height="100%"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         version="1.1"
       >
-        <g transform="translate(0 -700)">
+        
           <path
             d="M249.9 -322.9C330.1 -285.7 405.7 -221 446.5 -135.6C487.3 -50.2 493.3 56 439.4 118.4C385.6 180.7 271.8 199.2 188.6 243.6C105.4 288.1 52.7 358.5 -14.2 378.1C-81.1 397.6 -162.2 366.3 -203.8 308.3C-245.4 250.3 -247.6 165.7 -278.8 86.6C-310.1 7.4 -370.4 -66.3 -372.3 -139.7C-374.2 -213.1 -317.6 -286.1 -245.8 -326.1C-174 -366.1 -87 -373.1 -1.1 -371.6C84.8 -370.1 169.7 -360.2 249.9 -322.9"
             fill="rgba(247, 214, 227, 0.555)"
           ></path>
         </g>
+      </svg> -->
+      <svg
+        viewBox="150 50 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+        style="
+          position: absolute;
+          z-index: -10000;
+          overflow: visible;
+          top: 70%;
+          /* width: 150%; */
+        "
+      >
+        <path
+          fill="#FAE8EF"
+          d="M47.8,-73.4C62.8,-64.7,76.5,-53,84.1,-38C91.6,-23,92.9,-4.7,87.4,10.4C81.8,25.5,69.4,37.4,56.8,46C44.3,54.6,31.7,59.9,17.6,67.5C3.5,75,-12.1,84.8,-27.4,84.4C-42.6,83.9,-57.5,73.3,-62.4,58.9C-67.3,44.5,-62.3,26.4,-61,11C-59.7,-4.4,-62.3,-17,-57.3,-25.5C-52.4,-34.1,-40.1,-38.6,-29.3,-49.2C-18.5,-59.9,-9.2,-76.6,3.6,-82.2C16.4,-87.7,32.7,-82.1,47.8,-73.4Z"
+          transform="translate(100 100)"
+        />
       </svg>
     </main>
   </body>

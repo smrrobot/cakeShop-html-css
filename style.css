@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .link {
   cursor: pointer;
 }
@@ -50,48 +54,62 @@ header .logo img {
 main {
   padding: 15px 15%;
   margin-bottom: 50%;
+  position: relative;
 }
 main .title {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3em;
   color: rgb(56, 56, 56);
   text-decoration: none;
   padding: 0;
   z-index: 1;
 }
-main .top-container .main-cake {
-  width: 50%;
-  top: 100px;
-  position: absolute;
-  right: 5%;
-  background-color: rgba(255, 255, 255, 0);
-  z-index: -1;
+main .top-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
 }
 main .top-container .box {
+  flex: 2;
   padding: 10% 0 0 10%;
-  width: 70%;
+  flex-basis: 80%;
 }
 main .top-container .box p {
   line-height: 200%;
-  padding: 3% 35% 20% 0;
-  font-size: 1.2rem;
+  padding: 3% 45% 0% 0;
+  font-size: 1.2em;
   font-weight: 500;
 }
 main .top-container .box button {
+  margin-top: 10%;
   padding: 3% 5% 3% 5%;
   border: none;
   border-radius: 5px;
   background-color: rgb(189, 242, 238);
   font-weight: 400;
 }
+main .top-container .imgBox {
+  flex: 1;
+  align-items: center;
+}
+main .top-container .imgBox .main-cake {
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto -10% auto 0;
+  z-index: -1;
+}
 main .card-container {
-  margin-top: 10%;
+  margin-top: 20%;
 }
 main .card-container .card-title {
   flex-direction: column;
   text-align: center;
   padding-bottom: 5%;
+  background-color: none;
 }
 main .card-container .card-title p {
   line-height: 200%;
@@ -122,7 +140,7 @@ main .card-container div .card p {
   color: #edf0f1;
   position: absolute;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.8em;
   z-index: 10000;
   text-align: center;
 }
@@ -155,9 +173,10 @@ main .card-container div .card:nth-child(6) {
 }
 
 @media screen and (max-width: 700px) {
-  main .top-container .main-cake {
-    width: 500px;
-    right: -170px;
+  main .top-container .imgBox .main-cake {
+    width: 100%;
+    margin-top: 1%;
+    margin-right: -30%;
   }
   main .top-container .box {
     padding: 5% 0 0 5%;

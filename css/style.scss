@@ -16,6 +16,9 @@ $gray: gray;
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 .link {
   cursor: pointer;
 }
@@ -62,40 +65,37 @@ header {
 main {
   padding: 15px 15%;
   margin-bottom: 50%; // delete later
+  position: relative;
 
   .title {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3em;
     color: $black;
     text-decoration: none;
     padding: 0;
     z-index: 1;
   }
   .top-container {
-    .main-cake {
-      width: 50%;
-      top: 100px;
-      position: absolute;
-      right: 5%;
-      background-color: rgba(255, 255, 255, 0);
-      z-index: -1;
-    }
-
+    display: flex;
+    justify-content: space-around;
+    position: relative;
     .box {
-      // flex: 1;
+      flex: 2;
       padding: 10% 0 0 10%;
+      flex-basis: 80%;
       // border: 1px solid red;
-      width: 70%;
+      // width: 70%;
 
       p {
         line-height: 200%;
-        padding: 3% 35% 20% 0;
-        font-size: 1.2rem;
+        padding: 3% 45% 0% 0;
+        font-size: 1.2em;
         font-weight: 500;
       }
 
       button {
+        margin-top: 10%;
         padding: 3% 5% 3% 5%;
         border: none;
         border-radius: 5px;
@@ -103,17 +103,33 @@ main {
         font-weight: 400;
       }
     }
+    .imgBox {
+      flex: 1;
+      align-items: center;
+
+      .main-cake {
+        width: 60%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto -10% auto 0;
+        // margin-right: max(-5%, -30%);
+        z-index: -1;
+      }
+    }
   }
 
   .card-container {
     // border: 1px solid blue;
-    margin-top: 10%;
+    margin-top: 20%;
 
     .card-title {
       // border: 1px solid green;
       flex-direction: column;
       text-align: center;
       padding-bottom: 5%;
+      background-color: none;
 
       p {
         line-height: 200%;
@@ -147,7 +163,7 @@ main {
           color: #edf0f1;
           position: absolute;
           font-weight: 700;
-          font-size: 1.8rem;
+          font-size: 1.8em;
           z-index: 10000;
           text-align: center;
         }
@@ -184,10 +200,12 @@ main {
 @media screen and (max-width: 700px) {
   main {
     .top-container {
-      .main-cake {
-        width: 500px;
-
-        right: -170px;
+      .imgBox {
+        .main-cake {
+          width: 100%;
+          margin-top: 1%;
+          margin-right: -30%;
+        }
       }
       .box {
         // flex: 1;
