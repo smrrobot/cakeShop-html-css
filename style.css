@@ -55,6 +55,7 @@ main {
   padding: 15px 15%;
   margin-bottom: 50%;
   position: relative;
+  overflow-x: hidden;
 }
 main .title {
   font-family: "Open Sans", sans-serif;
