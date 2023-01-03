@@ -53,7 +53,6 @@ header .logo img {
 
 main {
   padding: 15px 15%;
-  margin-bottom: 50%;
   position: relative;
   overflow: hidden;
 }
@@ -163,6 +162,61 @@ main .card-container div .card:nth-child(5) {
 main .card-container div .card:nth-child(6) {
   background-color: rgb(196, 139, 70);
 }
+main .aboutContainer {
+  margin-top: 20%;
+}
+main .aboutContainer .img {
+  width: 400px;
+  position: relative;
+  top: -99px;
+}
+main .aboutContainer .imgPortraitBox {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(197, 156, 105);
+}
+main .aboutContainer .about {
+  flex: 1;
+  padding: 0 5%;
+}
+main .aboutContainer .about h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  color: rgb(56, 56, 56);
+  text-decoration: none;
+}
+main .aboutContainer .about p {
+  padding: 1em 0;
+}
+main .aboutContainer .aboutOne {
+  display: flex;
+  justify-content: space-between;
+}
+main .aboutContainer .aboutOne .about h1 span {
+  color: rgb(253, 148, 187);
+}
+main .aboutContainer .aboutOne .imgPortraitBox {
+  background-color: rgb(197, 156, 105);
+}
+main .aboutContainer .aboutTwo {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 15%;
+}
+main .aboutContainer .aboutTwo .about h1 span {
+  color: rgb(189, 242, 238);
+}
+main .aboutContainer .aboutTwo .imgPortraitBox {
+  background-color: rgb(253, 148, 187);
+}
+main .aboutContainer .aboutTwo .imgPortraitBox .img {
+  width: 230px;
+  position: unset;
+  display: block;
+  margin: auto auto;
+  margin-top: 35px;
+}
 
 .shadow {
   transition: ease-out 0.3s;
@@ -201,6 +255,9 @@ main .card-container div .card:nth-child(6) {
   }
   main .card-container .card .card-bg {
     width: 100px !important;
+  }
+  main .imgPortraitBox {
+    display: none !important;
   }
   header,
   main {
